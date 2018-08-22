@@ -120,4 +120,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-ASGI_APPLICATION = 'mysite2.routing.application'
+
+# mysite/settings.py
+# Channels
+ASGI_APPLICATION = 'mysit2.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
+
