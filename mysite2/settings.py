@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 # mysite/settings.py
 # Channels
-ASGI_APPLICATION = 'mysit2.routing.application'
+ASGI_APPLICATION = 'mysite2.routing.application'
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
